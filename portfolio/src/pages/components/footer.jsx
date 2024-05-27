@@ -4,9 +4,9 @@ import { FaGithub, FaLinkedin,FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="w-5/6 rounded-2xl ml-8 mr-8 p-4 bg-gray-700 text-gray-200 text-sm shadow-2xl flex justify-around flex-col md:flex-row  ">
+    <footer className="w-5/6 rounded-2xl ml-8 mr-8 p-4 bg-white bg-opacity-50 text-black text-sm shadow-2xl flex justify-around flex-col md:flex-row  ">
       <ul className="flex text-sm mb-2 ml-3 md:mb-0 md:ml-0">
-        <li className="flex justify-center items-center"><b>Contact Me:- </b> rajsumit1793@gmail.com</li>
+        <li className="flex justify-center items-center"><b>Contact Me:- </b><a href={`mailto:rajsumit1793@gmail.com`} className="hover:text-blue-600"> rajsumit1793@gmail.com</a></li>
       </ul>
       <span className="flex justify-center items-center mb-2 md:mb-0">Made with &#9829; by Sumit</span>
       <ul className="flex justify-center items-center">

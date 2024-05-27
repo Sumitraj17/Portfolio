@@ -5,8 +5,7 @@ import flipkart from "./components/images/flipkart.png";
 import intern from "./components/images/intern.jpg";
 import java from "./components/images/java.png";
 import medal from "./components/images/medal.png";
-import { Link, Outlet } from "react-router-dom";
-import { FaArrowLeft } from 'react-icons/fa';
+
 function Certificates() {
   const certificates = [
     {
@@ -42,8 +41,9 @@ function Certificates() {
   ];
   return (
     <>
-      <div className=" bg-gray-100">
-      <button className="ml-4 mt-4 border border-black rounded-full p-2 hover:bg-blue-50 bg-white"><Link to='/'><FaArrowLeft size={30} /></Link></button>
+      <div>
+        
+      {/* <button className="ml-4 mt-4 border border-black rounded-full p-2 hover:bg-blue-50 bg-white"><Link to='/'><FaArrowLeft size={30} /></Link></button> */}
         <h1 className=" italic text-5xl font-bold text-black text-center text-shadow-md ml-5 mr-5 mb-5">CERTIFICATES</h1>
         <div className="flex flex-wrap justify-evenly mt-20 2xl:flex-col">
           {certificates.map((cert, index) => (
