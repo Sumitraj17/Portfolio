@@ -1,0 +1,4 @@
+
+from = "/api/*"
+to = "https://portfolio-server-zuv6.onrender.com/api/*"
+status = 200
