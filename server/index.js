@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url'
 import { dirname } from 'path'
 import { config } from 'dotenv'
 import router from './Routes/router.js'
+import cors from 'cors'
 config()
 
 const __filepath = fileURLToPath(import.meta.url)
