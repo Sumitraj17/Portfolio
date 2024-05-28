@@ -11,6 +11,13 @@ const __dirname = dirname(__filepath)
 
 const app = express()
 const port = process.env.PORT || 3000
+const allowedOrigins = ['https://sumitraj-portfolio.netlify.app'];
+
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ['POST'],
+  credentials: true,
+}));
 app.use(express.json())  //middleware to parse Json
 
 app.use('/v1',router)

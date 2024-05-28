@@ -21,7 +21,7 @@ function Form() {
         const formData = new FormData(form);
         
         try{
-            const resp = await axios.post('/api/v1/mail', {
+            const resp = await axios.post('https://portfolio-server-zuv6.onrender.com/v1/mail', {
                 name:formData.get('name'),
                 number:formData.get('number'),
                 email:formData.get('email'),
