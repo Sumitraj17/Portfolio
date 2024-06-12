@@ -1,9 +1,12 @@
 import React from 'react';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
+import { Circles } from 'react-loader-spinner'
 
 function Form() {
-    const [response,setResponse]=useState();
+    const [response,setResponse]=useState(false);
+    const [loading,setLoading]=useState(true);
+    const [submit,setSubmit]=useState(false);
     const [formData,setFormData]=useState({
         name:'',
         number:'',
@@ -16,6 +19,7 @@ function Form() {
       };
       
     const handleSubmit = async (event) => {
+        setSubmit(true);
         event.preventDefault();
         const form = event.target;
         const formData = new FormData(form);
@@ -41,7 +45,7 @@ function Form() {
     }
     useEffect(()=>{
         setTimeout(()=>{
-            setResponse(null);
+            setResponse(false);
         },1000)
     },{response})
     return (
@@ -91,7 +95,15 @@ function Form() {
                     type="submit" 
                     className="border  rounded-2xl bg-green-400 text-lg hover:font-bold w-full md:w-1/3 m-2 p-3 hover:font-bold "
                 >
-                    Send
+                    Send{submit? (loading? <Circles
+  height="80"
+  width="80"
+  color="#4fa94d"
+  ariaLabel="circles-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+  /> :):}
                 </button>
             </form>
         </div>
