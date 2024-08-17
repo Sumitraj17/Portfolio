@@ -3,9 +3,16 @@ import store from "./components/images/store4.jpg";
 import web from "./components/images/zip2.png";
 import insight from "./components/images/insight.jpg";
 import Card from "./components/card.jsx";
-
+import icon from "./components/images/icon.png"
 function Projects() {
   const project = [
+    {
+      image: icon,
+      head: "VerifEye",
+      desc: "VerifEye is a powerful application designed to identify fake news and provide counter-narratives.With a ReactJS frontend and a Flask backend utilizing the Cohere API, VerifEye verifies statements, delivers confidence levels, and, if false, offers detailed counter-narratives. It aims to combat misinformation by providing accurate and reliable information to users.",
+      link: "https://github.com/Sumitraj17/VerifEye",
+      stack: "TechStack:- Mern Stack, Flask",
+    },
     {
       image: insight,
       head: "Academic Insight",

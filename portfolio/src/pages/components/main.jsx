@@ -17,7 +17,7 @@ function Main() {
                 <p className="text-base md:text-2xl italic text-black">
                     I am a dedicated web developer and a perpetual student, constantly honing my skills in creating dynamic web applications while staying updated with the latest advancements in technology. My passion for learning drives me to explore and integrate new concepts into my work continuously.
                 </p>
-                <button onClick={handleClick} className=" transform transition-transform duration-300 hover:scale-110  hover:shadow-lg font-semibold bg-green-600 border border-green-500 p-5  mt-10 rounded-full ">
+                <button onClick={handleClick} className=" transform transition-transform duration-300 hover:scale-110  hover:shadow-lg font-semibold text-white bg-green-600 border border-green-500 p-5  mt-10 rounded-full ">
                     Download Resume
                 </button>
             </section>

@@ -1,5 +1,5 @@
 import express from 'express'
-import path from 'path'
+// import path from 'path'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
 import { config } from 'dotenv'
@@ -12,7 +12,7 @@ const __dirname = dirname(__filepath)
 
 const app = express()
 const port = process.env.PORT || 3000
-const allowedOrigins = ['https://sumitraj-portfolio.netlify.app'];
+const allowedOrigins = ['https://sumitraj-portfolio.netlify.app','http://localhost:5173'];
 
 app.use(cors({
   origin: allowedOrigins,

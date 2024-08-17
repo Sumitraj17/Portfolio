@@ -1,20 +1,20 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
-// import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import context from "../../context/context.jsx";
 
 function Header() {
   const active = useContext(context);
   const handleClick = (event) => {
     console.log(event.target.textContent);
-    active.update(event.target.textContent); // Uncomment this line if 'active' is correctly defined and accessible
-};
+    active.update(event.target.textContent);
+  };
 
   useEffect(() => {
     console.log(active.state);
   });
+
   return (
-    <header className="w-5/6 mx-auto mb-8 rounded-xl p-4 bg-white bg-opacity-50 text-black text-lg shadow-2xl">
+    <header className="w-5/6 mx-auto mb-8 rounded-xl p-4 bg-white bg-opacity-50 text-black text-lg shadow-2xl transition-transform duration-300 md:p-4 md:text-lg md:shadow-2xl sm:p-3 sm:text-base sm:shadow-lg xs:p-2 xs:text-sm xs:shadow-md">
       <ul className="flex flex-col md:flex-row justify-evenly items-center space-y-2 md:space-y-0 md:space-x-4 cursor-pointer">
         <li
           className={`transform transition-transform duration-300 hover:scale-110 hover:shadow-lg ${
