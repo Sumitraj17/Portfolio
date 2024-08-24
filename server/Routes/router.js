@@ -1,6 +1,8 @@
 import { Router } from "express";
 import express from 'express'
 import {Resend} from 'resend'
+import { config } from 'dotenv'
+config()
 
 const router = Router()
 
