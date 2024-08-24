@@ -9,7 +9,7 @@ router.use(express.urlencoded({ extended: true }));
 
 router.post('/mail',async(req,res)=>{
     const {name,number,email,message} = req.body;
-    const resend = new Resend('re_SNuAzHik_88KhHwEYLwvihhnMwqn9T3jN');
+    const resend = new Resend(process.env.RESEND_API_KEY);
     console.log(name,number,email,message)
     try{
         const response = await resend.emails.send({
